@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#1D2223"
+    tools:context="com.example.monishakram.zapster.ChatActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewDeviceName"
+        android:text="DeviceName"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <ListView
+        android:id="@+id/listViewChatMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:layout_below="@+id/textViewDeviceName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#111111"
+        android:transcriptMode="alwaysScroll" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/TextToSend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Type to send"
+                android:textColor="#72f9d3"
+                android:textColorHint="#aaa3ffe4" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#1D2223"
+            android:layout_weight="8">
+
+            <ImageButton
+                android:id="@+id/imageButtonSend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#1D2223"
+                app:srcCompat="@drawable/sendbutton" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
